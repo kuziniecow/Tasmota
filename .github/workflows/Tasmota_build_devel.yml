@@ -1,8 +1,4 @@
-
-name: Build_development
-
-on:
- name: Tasmota CI (development)
+name: Tasmota CI (development)
 
 on:
   workflow_dispatch:
@@ -10,11 +6,11 @@ on:
     branches:
       - development
 
-
 # Ensures that only one deploy task per branch/environment will run at a time.
 concurrency:
   group: environment-${{ github.ref }}
   cancel-in-progress: true
+
 
 jobs:
   be_solidify:
